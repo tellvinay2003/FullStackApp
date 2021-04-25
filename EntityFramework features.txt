@@ -1,0 +1,18 @@
+it's ORM:
+Translates our code into SQL commands that update our tables in DB
+It crate a context which acts as bridge between our Entity classes and Database.
+
+DbContext.Users.Add(new USer {Id=4, Name = "Vinay"} ==> converted to ==>
+INSERT INTO Users(Id, Name) VALUES(4, 'John')
+
+It allows us:
+
+Querying
+Change Tracking - in our Entities
+Saving - insert update and delete - through SaveChanges method
+Concurrency - optimistic currency by default
+Transactions - automatic Trans mgmt
+Caching - offers built-in caching 
+Built-in conventions - 
+Configurations
+Migrations - create a DB schema , we can automatically generate DB

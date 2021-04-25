@@ -1,0 +1,268 @@
+**********************************************************************
+** Visual Studio 2019 Developer Command Prompt v16.9.2
+** Copyright (c) 2021 Microsoft Corporation
+**********************************************************************
+
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community>cd\
+
+C:\>cd dev
+
+C:\Dev>cd Developments
+
+C:\Dev\Developments>dir
+ Volume in drive C is OS
+ Volume Serial Number is C05B-A10F
+
+ Directory of C:\Dev\Developments
+
+04/24/2021  02:42 AM    <DIR>          .
+04/24/2021  02:42 AM    <DIR>          ..
+03/30/2021  03:21 PM             2,667 alpha.cert.pfx
+04/22/2021  10:59 AM         1,018,606 angular-query-builder-master.zip
+04/24/2021  01:56 AM    <DIR>          AngularProjects
+03/22/2021  05:52 PM             1,287 CARoot.cer
+03/22/2021  05:52 PM             2,364 CARoot.pvk
+03/22/2021  06:07 PM             1,295 ClientCert.cer
+03/22/2021  06:07 PM             2,364 ClientCert.pvk
+03/30/2021  03:23 PM             1,254 ClientPublicCer.cer
+03/22/2021  04:45 PM               210 CreateCARoot.cmd
+03/22/2021  06:06 PM               271 CreateSslClientCert.cmd
+03/22/2021  06:04 PM               297 CreateSslServerCert.cmd
+03/27/2021  12:09 PM    <DIR>          DotNet
+04/17/2021  11:40 AM    <DIR>          Lab1
+04/19/2021  01:01 AM    <DIR>          Lab2
+03/30/2021  04:15 PM             2,669 localClient.pfx
+03/16/2021  11:56 PM    <DIR>          Marketplace-master
+03/16/2021  11:55 PM           128,222 Marketplace-master.zip
+03/22/2021  06:04 PM             1,302 ServerSSL.cer
+03/22/2021  06:00 PM             2,364 ServerSSL.pvk
+03/30/2021  03:57 PM             2,621 test.co.uk.pfx
+              15 File(s)      1,167,793 bytes
+               7 Dir(s)  333,811,724,288 bytes free
+
+C:\Dev\Developments>cd DotNet
+
+C:\Dev\Developments\DotNet>dir
+ Volume in drive C is OS
+ Volume Serial Number is C05B-A10F
+
+ Directory of C:\Dev\Developments\DotNet
+
+03/27/2021  12:09 PM    <DIR>          .
+03/27/2021  12:09 PM    <DIR>          ..
+03/15/2021  11:39 PM    <DIR>          DesignHub_Hubbell
+03/27/2021  11:55 AM    <DIR>          ODL.Orchestra
+03/21/2021  11:19 AM    <DIR>          SecurityPOCs
+03/26/2021  03:01 PM    <DIR>          TechReading
+03/16/2021  01:22 PM    <DIR>          TestProjects
+03/16/2021  03:14 PM    <DIR>          UtilityServices
+03/16/2021  01:33 PM    <DIR>          WebAPI projects
+               0 File(s)              0 bytes
+               9 Dir(s)  333,810,171,904 bytes free
+
+C:\Dev\Developments\DotNet>mkdir FullStackApp
+
+C:\Dev\Developments\DotNet>cd FullStackApp
+
+C:\Dev\Developments\DotNet\FullStackApp>dotnet --info
+.NET SDK (reflecting any global.json):
+ Version:   5.0.201
+ Commit:    a09bd5c86c
+
+Runtime Environment:
+ OS Name:     Windows
+ OS Version:  10.0.19042
+ OS Platform: Windows
+ RID:         win10-x64
+ Base Path:   C:\Program Files\dotnet\sdk\5.0.201\
+
+Host (useful for support):
+  Version: 5.0.4
+  Commit:  f27d337295
+
+.NET SDKs installed:
+  2.2.207 [C:\Program Files\dotnet\sdk]
+  3.1.407 [C:\Program Files\dotnet\sdk]
+  5.0.201 [C:\Program Files\dotnet\sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.All 2.1.26 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
+  Microsoft.AspNetCore.All 2.2.8 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
+  Microsoft.AspNetCore.App 2.1.26 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 2.2.8 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 3.1.13 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 5.0.4 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 2.1.26 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 2.2.8 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 3.1.13 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 5.0.4 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 3.1.13 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 5.0.4 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+
+To install additional .NET runtimes or SDKs:
+  https://aka.ms/dotnet-download
+
+C:\Dev\Developments\DotNet\FullStackApp>dotnet -h
+.NET SDK (5.0.201)
+Usage: dotnet [runtime-options] [path-to-application] [arguments]
+
+Execute a .NET application.
+
+runtime-options:
+  --additionalprobingpath <path>   Path containing probing policy and assemblies to probe for.
+  --additional-deps <path>         Path to additional deps.json file.
+  --depsfile                       Path to <application>.deps.json file.
+  --fx-version <version>           Version of the installed Shared Framework to use to run the application.
+  --roll-forward <setting>         Roll forward to framework version  (LatestPatch, Minor, LatestMinor, Major, LatestMajor, Disable).
+  --runtimeconfig                  Path to <application>.runtimeconfig.json file.
+
+path-to-application:
+  The path to an application .dll file to execute.
+
+Usage: dotnet [sdk-options] [command] [command-options] [arguments]
+
+Execute a .NET SDK command.
+
+sdk-options:
+  -d|--diagnostics  Enable diagnostic output.
+  -h|--help         Show command line help.
+  --info            Display .NET information.
+  --list-runtimes   Display the installed runtimes.
+  --list-sdks       Display the installed SDKs.
+  --version         Display .NET SDK version in use.
+
+SDK commands:
+  add               Add a package or reference to a .NET project.
+  build             Build a .NET project.
+  build-server      Interact with servers started by a build.
+  clean             Clean build outputs of a .NET project.
+  help              Show command line help.
+  list              List project references of a .NET project.
+  msbuild           Run Microsoft Build Engine (MSBuild) commands.
+  new               Create a new .NET project or file.
+  nuget             Provides additional NuGet commands.
+  pack              Create a NuGet package.
+  publish           Publish a .NET project for deployment.
+  remove            Remove a package or reference from a .NET project.
+  restore           Restore dependencies specified in a .NET project.
+  run               Build and run a .NET project output.
+  sln               Modify Visual Studio solution files.
+  store             Store the specified assemblies in the runtime package store.
+  test              Run unit tests using the test runner specified in a .NET project.
+  tool              Install or manage tools that extend the .NET experience.
+  vstest            Run Microsoft Test Engine (VSTest) commands.
+
+Additional commands from bundled tools:
+  dev-certs         Create and manage development certificates.
+  fsi               Start F# Interactive / execute F# scripts.
+  sql-cache         SQL Server cache command-line tools.
+  user-secrets      Manage development user secrets.
+  watch             Start a file watcher that runs a command when files change.
+
+Run 'dotnet [command] --help' for more information on a command.
+
+C:\Dev\Developments\DotNet\FullStackApp>dotnet new --h
+Invalid input switch:
+  --h
+Run dotnet new --help for usage information.
+
+C:\Dev\Developments\DotNet\FullStackApp>dotnet new -h
+Usage: new [options]
+
+Options:
+  -h, --help          Displays help for this command.
+  -l, --list          Lists templates containing the specified template name. If no name is specified, lists all templates.
+  -n, --name          The name for the output being created. If no name is specified, the name of the output directory is used.
+  -o, --output        Location to place the generated output.
+  -i, --install       Installs a source or a template pack.
+  -u, --uninstall     Uninstalls a source or a template pack.
+  --interactive       Allows the internal dotnet restore command to stop and wait for user input or action (for example to complete authentication).
+  --nuget-source      Specifies a NuGet source to use during install.
+  --type              Filters templates based on available types. Predefined values are "project" and "item".
+  --dry-run           Displays a summary of what would happen if the given command line were run if it would result in a template creation.
+  --force             Forces content to be generated even if it would change existing files.
+  -lang, --language   Filters templates based on language and specifies the language of the template to create.
+  --update-check      Check the currently installed template packs for updates.
+  --update-apply      Check the currently installed template packs for update, and install the updates.
+
+
+
+C:\Dev\Developments\DotNet\FullStackApp>dotnet new sln
+The template "Solution File" was created successfully.
+
+C:\Dev\Developments\DotNet\FullStackApp>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Dev\Developments\DotNet\FullStackApp>dir
+ Volume in drive C is OS
+ Volume Serial Number is C05B-A10F
+
+ Directory of C:\Dev\Developments\DotNet\FullStackApp
+
+04/25/2021  01:01 AM    <DIR>          .
+04/25/2021  01:01 AM    <DIR>          ..
+04/25/2021  01:01 AM               550 FullStackApp.sln
+               1 File(s)            550 bytes
+               2 Dir(s)  333,757,546,496 bytes free
+
+C:\Dev\Developments\DotNet\FullStackApp>dotnet new webapi -o API
+The template "ASP.NET Core Web API" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on API\API.csproj...
+  Determining projects to restore...
+  Restored C:\Dev\Developments\DotNet\FullStackApp\API\API.csproj (in 172 ms).
+Restore succeeded.
+
+
+C:\Dev\Developments\DotNet\FullStackApp>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Dev\Developments\DotNet\FullStackApp>dir
+ Volume in drive C is OS
+ Volume Serial Number is C05B-A10F
+
+ Directory of C:\Dev\Developments\DotNet\FullStackApp
+
+04/25/2021  01:03 AM    <DIR>          .
+04/25/2021  01:03 AM    <DIR>          ..
+04/25/2021  01:03 AM    <DIR>          API
+04/25/2021  01:01 AM               550 FullStackApp.sln
+               1 File(s)            550 bytes
+               3 Dir(s)  333,750,734,848 bytes free
+
+C:\Dev\Developments\DotNet\FullStackApp>dotnet sln add API
+Project `API\API.csproj` added to the solution.
+
+C:\Dev\Developments\DotNet\FullStackApp>code .
+
+C:\Dev\Developments\DotNet\FullStackApp>cd API
+
+C:\Dev\Developments\DotNet\FullStackApp\API>dotner run
+'dotner' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Dev\Developments\DotNet\FullStackApp\API>dotnet run
+Building...
+info: Microsoft.Hosting.Lifetime[0]
+      Now listening on: https://localhost:5001
+info: Microsoft.Hosting.Lifetime[0]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Dev\Developments\DotNet\FullStackApp\API
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+
+C:\Dev\Developments\DotNet\FullStackApp\API> dotnet dev-certs https --trust
+Trusting the HTTPS development certificate was requested. A confirmation prompt will be displayed if the certificate was not previously trusted. Click yes on the prompt to trust the certificate.
+A valid HTTPS certificate is already present.
+
+C:\Dev\Developments\DotNet\FullStackApp\API>code .
+
+C:\Dev\Developments\DotNet\FullStackApp\API>
