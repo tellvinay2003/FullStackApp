@@ -26,6 +26,7 @@ namespace API
 
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        //  ordering of service calls are not important in this method
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(options =>
@@ -33,6 +34,8 @@ namespace API
                 options.UseSqlite(_config.GetConnectionString("DefaultConnection"));
             });
 
+            // Access to XMLHttpRequest at 'https://localhost:5001/api/users' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+            services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" }));
@@ -51,6 +54,13 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            // this invocation must be in between UseRouting and UseEndpoints
+            app.UseCors(x => x
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .WithOrigins("https://localhost:4200")
+                );
 
             app.UseAuthorization();
 
