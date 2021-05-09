@@ -1,0 +1,87 @@
+Your environment has been set up for using Node.js 14.16.1 (x64) and npm.
+
+C:\Users\progr>cd\
+
+C:\>cd dev
+
+C:\Dev>cd Developments
+
+C:\Dev\Developments>cd DotNet
+
+C:\Dev\Developments\DotNet>dir
+ Volume in drive C is OS
+ Volume Serial Number is C05B-A10F
+
+ Directory of C:\Dev\Developments\DotNet
+
+04/27/2021  02:28 PM    <DIR>          .
+04/27/2021  02:28 PM    <DIR>          ..
+03/15/2021  11:39 PM    <DIR>          DesignHub_Hubbell
+04/26/2021  02:43 AM    <DIR>          FullStackApp
+03/27/2021  11:55 AM    <DIR>          ODL.Orchestra
+03/21/2021  11:19 AM    <DIR>          SecurityPOCs
+03/26/2021  03:01 PM    <DIR>          TechReading
+03/16/2021  01:22 PM    <DIR>          TestProjects
+03/16/2021  03:14 PM    <DIR>          UtilityServices
+03/16/2021  01:33 PM    <DIR>          WebAPI projects
+               0 File(s)              0 bytes
+              10 Dir(s)  344,980,975,616 bytes free
+
+C:\Dev\Developments\DotNet>cd FullStackApp
+
+C:\Dev\Developments\DotNet\FullStackApp>cd client
+
+C:\Dev\Developments\DotNet\FullStackApp\client>ng g -h
+Generates and/or modifies files based on a schematic.
+usage: ng generate <schematic> [options]
+
+arguments:
+  schematic
+    The schematic or collection:schematic to generate.
+
+options:
+  --defaults
+    Disable interactive input prompts for options with a default.
+  --dry-run (-d)
+    Run through and reports activity without writing out results.
+  --force (-f)
+    Force overwriting of existing files.
+  --help
+    Shows a help message for this command in the console.
+  --interactive
+    Enable interactive input prompts.
+
+Available Schematics:
+  Collection "@schematics/angular" (default):
+    app-shell
+    application
+    class
+    component
+    directive
+    enum
+    guard
+    interceptor
+    interface
+    library
+    module
+    pipe
+    resolver
+    service
+    service-worker
+    web-worker
+
+
+C:\Dev\Developments\DotNet\FullStackApp\client>cd app
+The system cannot find the path specified.
+
+C:\Dev\Developments\DotNet\FullStackApp\client>cd src
+
+C:\Dev\Developments\DotNet\FullStackApp\client\src>cd app
+
+C:\Dev\Developments\DotNet\FullStackApp\client\src\app>ng g c nav --skip-tests
+CREATE src/app/nav/nav.component.html (18 bytes)
+CREATE src/app/nav/nav.component.ts (264 bytes)
+CREATE src/app/nav/nav.component.scss (0 bytes)
+UPDATE src/app/app.module.ts (894 bytes)
+
+C:\Dev\Developments\DotNet\FullStackApp\client\src\app>

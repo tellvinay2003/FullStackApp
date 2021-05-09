@@ -1,0 +1,27 @@
+Your environment has been set up for using Node.js 14.16.1 (x64) and npm.
+
+C:\Users\progr>cd\
+
+C:\>cd dev
+
+C:\Dev>cd Developments
+
+C:\Dev\Developments>cd DotNet
+
+C:\Dev\Developments\DotNet>cd FullStackApp
+
+C:\Dev\Developments\DotNet\FullStackApp>cd client
+
+C:\Dev\Developments\DotNet\FullStackApp\client>cd app
+The system cannot find the path specified.
+
+C:\Dev\Developments\DotNet\FullStackApp\client>cd src
+
+C:\Dev\Developments\DotNet\FullStackApp\client\src>cd app
+
+C:\Dev\Developments\DotNet\FullStackApp\client\src\app>cd _services
+
+C:\Dev\Developments\DotNet\FullStackApp\client\src\app\_services>ng g s account --skip-tests
+CREATE src/app/_services/account.service.ts (136 bytes)
+
+C:\Dev\Developments\DotNet\FullStackApp\client\src\app\_services>

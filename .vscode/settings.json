@@ -1,5 +1,17 @@
 {
     "cSpell.words": [
         "DTOs"
+    ],
+    "cSpell.ignoreWords": [
+        "for",
+        "id",
+        "let",
+        "li",
+        "name",
+        "ng",
+        "of",
+        "ul",
+        "user",
+        "users"
     ]
 }

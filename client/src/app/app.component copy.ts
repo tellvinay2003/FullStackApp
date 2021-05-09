@@ -30,13 +30,12 @@ export class AppComponent implements OnInit {
   // to deactivate Type safety
   users: any;
 
-//  constructor(private http: HttpClient, private accountService: AccountService){}
-constructor(private accountService: AccountService){}
+ constructor(private http: HttpClient, private accountService: AccountService){}
 
  // OnInit called after Constructor. We have removed default "void" return type here
   ngOnInit() {
     // to access any class property, we have to use this keyword
-    // this.getUsers();
+    this.getUsers();
 
     // Set current user context
     this.setCurrentUser();
@@ -49,16 +48,16 @@ constructor(private accountService: AccountService){}
 
   }
 
-  // getUsers(){
-  //   // to access any class property, we have to use this keyword
-  //   this.http.get('https://localhost:5001/api/Users')
-  //   .subscribe(response => {
-  //                 this.users = response;
-  //                           },
-  //               error => {
-  //                 console.log(error);
-  //           })
-  // }
+  getUsers(){
+    // to access any class property, we have to use this keyword
+    this.http.get('https://localhost:5001/api/Users')
+    .subscribe(response => {
+                  this.users = response;
+                            },
+                error => {
+                  console.log(error);
+            })
+  }
   }
 
 
