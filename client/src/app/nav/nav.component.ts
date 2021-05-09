@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/internal/Observable';
 
 // for routing specific pages
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-nav',
@@ -23,9 +24,12 @@ export class NavComponent implements OnInit {
 
 
   // we'll inject our Account service inside this component through CTor
+
   // we'll inject router and as per the option clicked, the request will be redirected to corresponding page
   // for eg after successful login it should be redirected to member page so '/members' will be set as route
-  constructor(public  accountService : AccountService, private router : Router) { }
+
+  // we'll inject Toast service into this component
+  constructor(public  accountService : AccountService, private router : Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     // Get the current user from account service
@@ -45,6 +49,7 @@ export class NavComponent implements OnInit {
     // Error handling
     error =>{
       console.log(error);
+      this.toastr.error(error.error);
     });
   }
 

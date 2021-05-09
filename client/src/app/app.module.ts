@@ -35,6 +35,8 @@ import { ListsComponent } from './lists/lists.component';
 // create new component named as messages in app using "ng g c" command.
 import { MessagesComponent } from './messages/messages.component';
 
+import { ToastrModule } from 'ngx-toastr';
+
 // decorator for Module is @NgModule
 // This is the Root module
 @NgModule({
@@ -65,7 +67,11 @@ import { MessagesComponent } from './messages/messages.component';
 
      // import BsDropdownModule from angular framework (directive on top) and use here
      // forRoot means some services or components that it needs to initialize along with the root module
-     BsDropdownModule.forRoot()
+     BsDropdownModule.forRoot(),
+
+     ToastrModule.forRoot({
+       positionClass:'toast-bottom-right'
+     })
   ],
 
   //In previous versions of Angular the decorator was used to be registered in app.modules under providers: [],
