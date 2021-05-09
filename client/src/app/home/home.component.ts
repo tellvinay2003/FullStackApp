@@ -11,12 +11,13 @@ export class HomeComponent implements OnInit {
   // Add a property to display and hide the register form in home component html
   registerMode = false
 
-  users : any;
+  // users : any;
 
-  constructor(private http:HttpClient ) { }
+  // constructor(private http:HttpClient ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getUsers();
+    // this.getUsers();
   }
 
 
@@ -26,11 +27,11 @@ export class HomeComponent implements OnInit {
   }
 
 
-  getUsers(){
-    this.http.get("https://localhost:5001/api/users").subscribe(users => {
-      this.users = users;
-    })
-  }
+  // getUsers(){
+  //   this.http.get("https://localhost:5001/api/users").subscribe(users => {
+  //     this.users = users;
+  //   })
+  // }
 
   cancelRegisterMode(event: boolean){
     // this event parameter will be provided by register component as 'false'

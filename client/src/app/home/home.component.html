@@ -19,7 +19,9 @@
 
       <!-- when we receive data from ay component, we use '[]', and when we provide data to any component, we use '()'
             so our cancelRegisterMode receive events from child component .. here from register component-->
-       <app-register [usersFromHomeComponent] = "users" (cancelRegister) = "cancelRegisterMode($event)" ></app-register>
+       <!-- <app-register [usersFromHomeComponent] = "users" (cancelRegister) = "cancelRegisterMode($event)" ></app-register> -->
+
+       <app-register (cancelRegister) = "cancelRegisterMode($event)" ></app-register>
 
 
       </div>

@@ -62,14 +62,32 @@ currentUser$ = this.currentUserSource.asObservable();
   }
 
 
-  register(model:any){
+  // inside this method we tried to map user as object and not provided as strong type as 'user: User'
+  // that's why while working on that data we need to type cast it : user as User at line 72.
+  // The correct way is map(user: User => {})...... as line 70
 
-    return this.http.post(this.baseUrl + 'account/register', model).pipe(
-      map(user => {
+  // register(model:any){
+  //   return this.http.post(this.baseUrl + 'account/register', model).pipe(
+  //     map(user => {
+  //       if(user){
+  //         localStorage.setItem('user', JSON.stringify(user));
+  //         this.currentUserSource.next(user as User);
+  //       }
+  //       return user;
+  //     })
+  //   )
+  // }
+
+
+  // The correct way is
+  register(model:any){
+    return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
+      map((user:User) => {
         if(user){
           localStorage.setItem('user', JSON.stringify(user));
-          this.currentUserSource.next(user as User);
+          this.currentUserSource.next(user);
         }
+        return user;
       })
     )
   }

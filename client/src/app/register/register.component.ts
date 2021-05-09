@@ -1,3 +1,4 @@
+import { AccountService } from './../_services/account.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ export class RegisterComponent implements OnInit {
 
   // access data from it's parent component which is home component
   // for this we add @Input decorator
-  @Input() usersFromHomeComponent : any;
+  // @Input() usersFromHomeComponent : any;
 
 
   // now providing data to it's parent component which is home component
@@ -19,14 +20,20 @@ export class RegisterComponent implements OnInit {
 
   model: any = {};
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
   }
 
 
   register(){
-    console.log(this.model);
+    // console.log(this.model);
+    return this.accountService.register(this.model).subscribe(response => {
+      console.log(response);
+      this.cancel();
+    }, error => {
+      console.log(error);
+    } )
   }
 
   cancel(){
