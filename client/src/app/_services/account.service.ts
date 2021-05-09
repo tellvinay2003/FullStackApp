@@ -32,7 +32,7 @@ baseUrl = "https://localhost:5001/api/" ;
 // It buffers a set number of values and will emit those values immediately to any new subscribers in addition to emitting new values to existing subscribers
 // ReplaySubject<User>(n) : means store n values ie; size of the buffer
 
- private currentUserSource = new ReplaySubject<User>(1);
+ private currentUserSource =  new ReplaySubject<User>(1);
 
 // just make it nullable by adding | operator with null in generic type
 //// private currentUserSource = new ReplaySubject<User| null>(1);

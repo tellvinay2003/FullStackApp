@@ -22,6 +22,19 @@ import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 
+// For routing we create new folder named members in app. and created new component named member-list using "ng g c" command
+import { MemberListComponent } from './members/member-list/member-list.component';
+
+// For routing we create new folder named members in app. and created new component named member-detail using "ng g c" command.
+// this component will provide detail view of a member
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+
+// create new component named as list in app using "ng g c" command.
+import { ListsComponent } from './lists/lists.component';
+
+// create new component named as messages in app using "ng g c" command.
+import { MessagesComponent } from './messages/messages.component';
+
 // decorator for Module is @NgModule
 // This is the Root module
 @NgModule({
@@ -30,9 +43,13 @@ import { RegisterComponent } from './register/register.component';
 
     // newly created component using ng g c <componentName>  --skip-tests (skipping to create test files).
     // This command automatically adds "Component" suffix with <componentName>
-    NavComponent,
+     NavComponent,
      HomeComponent,
-     RegisterComponent
+     RegisterComponent,
+     MemberListComponent,
+     MemberDetailComponent,
+     ListsComponent,
+     MessagesComponent
   ],
   imports: [
     BrowserModule,

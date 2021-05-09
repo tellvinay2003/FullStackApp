@@ -1,16 +1,25 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 <div class="container">
-  <a class="navbar-brand" href="#">FullStackApp</a>
+
+  <!-- here we replace direct navigation  href="#" with link to our navigation components dynamically so href will be replaced by routerLink='/componentName' AND
+    if component name is given as '/' it means it'll redirect to default navigation/ route -->
+  <a class="navbar-brand" routerLink= '/'>FullStackApp</a>
 
         <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="currentUser$ | async">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Compatible</a>
+
+          <!-- here href="#"  is replaced by routerLink = '/members' -->
+            <a class="nav-link active" aria-current="page" routerLink= '/members' routerLinkActive = 'active'>Matches</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Lists</a>
+
+          <!-- here href="#"  is replaced by routerLink = '/lists' -->
+            <a class="nav-link active" routerLink= '/lists' routerLinkActive = 'active'>Lists</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Messages</a>
+
+          <!-- here href="#"  is replaced by routerLink = '/messages' -->
+            <a class="nav-link active" routerLink= '/messages' routerLinkActive = 'active'>Messages</a>
           </li>
 
         </ul>

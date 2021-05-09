@@ -5,6 +5,9 @@ import { AccountService } from '../_services/account.service';
 import { User } from '../_models/user';
 import { Observable } from 'rxjs/internal/Observable';
 
+// for routing specific pages
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -20,7 +23,9 @@ export class NavComponent implements OnInit {
 
 
   // we'll inject our Account service inside this component through CTor
-  constructor(public  accountService : AccountService) { }
+  // we'll inject router and as per the option clicked, the request will be redirected to corresponding page
+  // for eg after successful login it should be redirected to member page so '/members' will be set as route
+  constructor(public  accountService : AccountService, private router : Router) { }
 
   ngOnInit(): void {
     // Get the current user from account service
@@ -32,8 +37,10 @@ export class NavComponent implements OnInit {
 
     // Access injected account service's login method here. Since login method here returns Observable<Object>,
     // we need to simplify it by using subscribe as
+    // after successful login, it should be routed to members page
     this.accountService.login(this.model).subscribe(response => {
       console.log(response);
+      this.router.navigateByUrl('/members');
     },
     // Error handling
     error =>{
@@ -44,6 +51,9 @@ export class NavComponent implements OnInit {
 
   logout(){
     this.accountService.logout();
+
+    // after successful logout we should redirect to home page
+    this.router.navigateByUrl('/')
   }
 
 }
