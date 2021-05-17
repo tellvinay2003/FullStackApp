@@ -5,16 +5,18 @@ import { MemberListComponent } from './members/member-list/member-list.component
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import {ListsComponent} from './lists/lists.component';
 import {MessagesComponent} from './messages/messages.component';
+import { AuthGuard } from './_guards/auth.guard';
 
 
 const routes: Routes = [
   // path:'' means default.. so if someone tries to hit app with localhost:4200... without specific component name.. it'll be directed to HomeComponent
   {path: '', component: HomeComponent},
 
-  {path: 'members', component: MemberListComponent},
-  {path: 'members/:id', component: MemberDetailComponent},
-  {path: 'lists', component: ListsComponent},
-  {path: 'messages', component: MessagesComponent},
+  // Add route guard with member component. Specify 'CanActivate' property and pass array of AuthGuard objects
+  {path: 'members', component: MemberListComponent, canActivate:[AuthGuard]},
+  {path: 'members/:id', component: MemberDetailComponent, canActivate:[AuthGuard]},
+  {path: 'lists', component: ListsComponent, canActivate:[AuthGuard]},
+  {path: 'messages', component: MessagesComponent, canActivate:[AuthGuard]},
 
   // wildcard route: user types something which doesn't match with any of the component in application, we'll redirect to the HomeComponent
   // and we specify an extra attribute and we say 'pathMatch'

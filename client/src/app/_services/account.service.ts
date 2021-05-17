@@ -6,6 +6,7 @@ import {map} from 'rxjs/operators';
 import { User } from '../_models/user';
 
 import {ReplaySubject} from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 // when on CLI we invoke command ng g s <account>. A new service named as AccountService gets created.
 // the Decorator named "Injectable" .. this means this services can be injected into other components or services in our application
@@ -41,8 +42,10 @@ baseUrl = "https://localhost:5001/api/" ;
 currentUser$ = this.currentUserSource.asObservable();
 
 
+
  // inject http client in account service
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   // create a login method. this login method is gonna receive our credentials  from the login form.
   // for now we just call it model and give a type of 'any' for time being.
@@ -98,7 +101,10 @@ currentUser$ = this.currentUserSource.asObservable();
 
   logout(){
     localStorage.removeItem('user');
-    // this.currentUserSource.next();
+    // this.currentUserSource.next(null);
+    this.currentUserSource =  new ReplaySubject<User>(1);
+    // localStorage.setItem('user', '');
+
   }
 
 }

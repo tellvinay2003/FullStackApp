@@ -69,8 +69,11 @@ import { ToastrModule } from 'ngx-toastr';
      // forRoot means some services or components that it needs to initialize along with the root module
      BsDropdownModule.forRoot(),
 
+     // Show toastr message in bottom right of the screen
      ToastrModule.forRoot({
-       positionClass:'toast-bottom-right'
+
+      // positionClass:'toast-bottom-right'
+       positionClass:'toast-top-right'
      })
   ],
 
