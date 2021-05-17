@@ -7,6 +7,7 @@ import { User } from '../_models/user';
 
 import {ReplaySubject} from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
+import { NONE_TYPE } from '@angular/compiler';
 
 // when on CLI we invoke command ng g s <account>. A new service named as AccountService gets created.
 // the Decorator named "Injectable" .. this means this services can be injected into other components or services in our application
@@ -101,9 +102,12 @@ currentUser$ = this.currentUserSource.asObservable();
 
   logout(){
     localStorage.removeItem('user');
-    // this.currentUserSource.next(null);
-    this.currentUserSource =  new ReplaySubject<User>(1);
-    // localStorage.setItem('user', '');
+
+    this.currentUserSource.next();
+
+
+    // this.currentUserSource =  new ReplaySubject<User>(1);
+    // localStorage.setItem('user',  JSON.stringify(null));
 
   }
 
