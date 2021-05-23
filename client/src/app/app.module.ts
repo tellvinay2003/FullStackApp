@@ -36,6 +36,7 @@ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 
 import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from './_modules/shared.module';
 
 // decorator for Module is @NgModule
 // This is the Root module
@@ -64,17 +65,20 @@ import { ToastrModule } from 'ngx-toastr';
 
      // Newly added module from Angular Framework
      FormsModule,
+    //  // SharedModule
+    //  // import BsDropdownModule from angular framework (directive on top) and use here
+    //  // forRoot means some services or components that it needs to initialize along with the root module
+    //  BsDropdownModule.forRoot(),
 
-     // import BsDropdownModule from angular framework (directive on top) and use here
-     // forRoot means some services or components that it needs to initialize along with the root module
-     BsDropdownModule.forRoot(),
+    //  // Show toastr message in bottom right of the screen
+    //  ToastrModule.forRoot({
 
-     // Show toastr message in bottom right of the screen
-     ToastrModule.forRoot({
+    //   // positionClass:'toast-bottom-right'
+    //    positionClass:'toast-top-right'
+    //  })
 
-      // positionClass:'toast-bottom-right'
-       positionClass:'toast-top-right'
-     })
+    // Created a separate module and declared BsDropdownModule and ToastrModule there and referenced their container module here
+    SharedModule
   ],
 
   //In previous versions of Angular the decorator was used to be registered in app.modules under providers: [],
