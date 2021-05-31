@@ -3,13 +3,13 @@
 
   <!-- here we replace direct navigation  href="#" with link to our navigation components dynamically so href will be replaced by routerLink='/componentName' AND
     if component name is given as '/' it means it'll redirect to default navigation/ route -->
-  <a class="navbar-brand" routerLink= '/'>FullStackApp</a>
+  <a class="navbar-brand" routerLink= '/'>SocialApp</a>
 
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <ng-container  *ngIf="accountService.currentUser$ | async">
           <li class="nav-item">
           <!-- here href="#"  is replaced by routerLink = '/members' -->
-            <a class="nav-link" aria-current="page" routerLink= '/members' routerLinkActive = 'active'>Matches</a>
+            <a class="nav-link" aria-current="page" routerLink= '/members' routerLinkActive = 'active'>Members</a>
           </li>
           <li class="nav-item">
           <!-- here href="#"  is replaced by routerLink = '/lists' -->

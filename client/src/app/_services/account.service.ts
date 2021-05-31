@@ -8,6 +8,7 @@ import { User } from '../_models/user';
 import {ReplaySubject} from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { NONE_TYPE } from '@angular/compiler';
+import { environment } from 'src/environments/environment';
 
 // when on CLI we invoke command ng g s <account>. A new service named as AccountService gets created.
 // the Decorator named "Injectable" .. this means this services can be injected into other components or services in our application
@@ -26,7 +27,7 @@ import { NONE_TYPE } from '@angular/compiler';
 // this service is created to make request to our API
 export class AccountService {
 baseUrl = "https://localhost:5001/api/" ;
-
+// baseUrl = environment.apiUrl;
 
 // Create an observable to store our use in
 
